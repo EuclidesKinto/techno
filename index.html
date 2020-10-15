@@ -36,6 +36,7 @@
                 
       </div>
     </section>
+
     <section @click="fecharModal" class="modal" v-if="produto" >
       <div class="modal_container">
         <div class="modal_img">
@@ -57,11 +58,11 @@
             <p class="review_usuario">{{review.nome}} | {{review.estrelas}} estrelas</p>
           </div>
         </div>
-
       </div>
-
     </section>
-    
+    <div class="alerta" :class="{ativo: alertaAtivo}">
+      <p class="alerta_mensagem">{{mensagemAlerta}}</p>
+    </div>
   </div>
 <script src="./app.js"></script>
 </body>
